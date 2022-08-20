@@ -1,0 +1,100 @@
+:root {
+	--offcanvas-width: 270px;
+	--topNavbarHeight: 72px;
+}
+.sidebar-nav {
+	width: var(--offcanvas-width);
+}
+.sidebar-link {
+	display: flex;
+	align-items: center;
+}
+.sidebar-link .right-icon {
+	display: inline-flex;
+}
+.sidebar-link[aria-expanded="true"] .right-icon {
+	transform: rotate(180deg);
+}
+@media (min-width: 992px) {
+	body {
+		overflow: auto !important;
+	}
+	main {
+		margin-left: var(--offcanvas-width);
+		margin-top: var(--topNavbarHeight);
+	}
+	/* this is to remove the backdrop */
+	.offcanvas-backdrop::before {
+		display: none;
+	}
+	.sidebar-nav {
+		-webkit-transform: none;
+		transform: none;
+		visibility: visible !important;
+		height: calc(100% - var(--topNavbarHeight));
+		top: var(--topNavbarHeight);
+	}
+}
+
+@media (max-width: 768px) {
+	/* .pie-chart{
+		width: 30rem;
+	} */
+
+	.chart-section {
+		margin-top: 3rem;
+	}
+}
+.nav-sidebar-brand {
+	visibility: hidden;
+}
+
+@media (max-width: 500px) {
+	.nav-navbar-brand {
+		visibility: hidden;
+	}
+
+	.nav-sidebar-brand {
+		visibility: visible;
+	}
+}
+
+.profile-img {
+	height: 20px;
+	width: 20px;
+	visibility: hidden;
+}
+
+.nav-btn {
+	border-radius: 50px;
+}
+
+.dropdown-toggle::after {
+	content: none;
+}
+
+.body-content {
+	margin-top: calc(var(--topNavbarHeight));
+}
+
+footer {
+	margin-left: calc(var(--offcanvas-width));
+	/* margin-top: 300px; */
+}
+
+.sticky-bottom {
+	position: -webkit-sticky;
+	position: sticky;
+	bottom: 0;
+	z-index: 1020;
+}
+
+/* settings css */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+input[type="number"] {
+	-moz-appearance: textfield;
+}
