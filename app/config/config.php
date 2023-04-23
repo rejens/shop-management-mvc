@@ -1,6 +1,10 @@
 <?php
 //approot
 define("APPROOT", dirname(dirname(__FILE__)));
+define("APP", __FILE__);
+
+
+
 
 //url root
 define("URLROOT", "http://localhost/tps_for_shop/");

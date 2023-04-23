@@ -19,13 +19,15 @@ class Core
 
         //look in controllers for first index
 
-        if (isset($url)) {
-            if (file_exists("../app/controllers/$url[0].php")) {
+         if (isset($url)) {
+            $fileName=ucwords($url[0].".php");
+            if (file_exists("../app/controllers/".$fileName)) {
                 $this->currentController = $url[0];
             }
         }
         unset($url[0]);
-        require_once("../app/controllers/$this->currentController.php");
+        require_once("../app/controllers/".ucwords($this->currentController).".php");
+       
         $this->currentController = new $this->currentController;
 
         if (isset($url[1])) {
