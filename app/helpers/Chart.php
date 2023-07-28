@@ -73,6 +73,9 @@ class Chart
 
     ?>
         <script>
+                  // alert("this is line chart")
+
+                  console.log(<?php echo json_encode($result) ?> )
             var datee = [];
             var pl = [];
             <?php

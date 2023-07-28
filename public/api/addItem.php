@@ -16,4 +16,6 @@ if($expiry<=$today && strlen($expiry)<0){
 else{
 $sql = "insert into items (name,cp,sp,quantity,user_id,expiry_date,vendor) values('$name','$cp','$sp','$quantity','$user_id','$expiry','$vendor')";
 $conn->query($sql);
+$sql="insert into buying_transaction (user_id,datee,vendor,quantity,price,name) values('$user_id','$today','$vendor','$quantity','$cp','$name')";
+$conn->query($sql);
 }

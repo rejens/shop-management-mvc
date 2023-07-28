@@ -48,7 +48,7 @@ class Items extends Database
 
     public function lineChart($user_id)
     {
-        $sql = "select datee,sum(salesAmt) as 'group' from selling_transaction where user_id='$user_id' GROUP by datee order by datee ";
+        $sql = "select datee,sum(pl) as 'group' from selling_transaction where user_id='$user_id' GROUP by datee order by datee ";
         return $this->query($sql);
     }
 
