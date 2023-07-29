@@ -93,8 +93,8 @@ class Chart
             let data = pl;
             var lineChart = document.getElementById("lineChart").getContext('2d');
             let gradient = lineChart.createLinearGradient(0, 0, 0, 400)
-            gradient.addColorStop(0, "rgb(58,123,231,1");
-            gradient.addColorStop(1, "rgb(0,210,255,0.3");
+            gradient.addColorStop(0, "rgba(58,123,231,1)");
+            gradient.addColorStop(1, "rgba(0,210,255,0.3)");
 
             var myLineChart = new Chart(lineChart, {
                 type: 'line',
